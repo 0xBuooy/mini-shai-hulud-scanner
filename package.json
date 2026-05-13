@@ -17,7 +17,11 @@
     "scan": "bun run src/scan.ts",
     "test": "bun test",
     "build": "bun run scripts/build.ts",
-    "prepublishOnly": "bun run build"
+    "prepublishOnly": "bun test && bun run build",
+    "refresh-db": "bun run update-db && (git diff --quiet compromised-db.json || git commit -m 'chore: refresh compromised-db.json' compromised-db.json)",
+    "release:patch": "bun run refresh-db && npm version patch && npm publish && git push --follow-tags",
+    "release:minor": "bun run refresh-db && npm version minor && npm publish && git push --follow-tags",
+    "release:major": "bun run refresh-db && npm version major && npm publish && git push --follow-tags"
   },
   "devDependencies": {
     "@types/bun": "latest",
