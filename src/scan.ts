@@ -33,6 +33,15 @@ console.log(
 );
 for (const f of result.scannedFiles) console.log(`  ${pc.dim("·")} ${f}`);
 
+const affected = result.findings.length;
+const clean = Math.max(0, result.packagesScanned - affected);
+console.log();
+console.log(
+  `${pc.bold(String(result.packagesScanned))} package(s) scanned · ` +
+    `${pc.green(`${clean} clean`)} · ` +
+    `${affected > 0 ? pc.red(pc.bold(`${affected} affected`)) : pc.dim("0 affected")}`,
+);
+
 if (result.errors.length > 0) {
   console.log();
   console.log(pc.yellow(`⚠ ${result.errors.length} parse error(s):`));

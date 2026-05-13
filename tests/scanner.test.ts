@@ -73,76 +73,96 @@ function printFindings(label: string, findings: Finding[]): void {
 // --- clean fixtures: parsers handle real-world lockfiles without false positives
 
 test("scanBunLockFile parses bun lockfileVersion 1 cleanly", async () => {
-  const findings = await scanBunLockFile(
+  const { findings, packagesScanned } = await scanBunLockFile(
     resolve(fixtures, "bun-v1.lock"),
     await loadIndex(),
   );
-  printFindings("bun-v1.lock (clean)", findings);
+  printFindings(`bun-v1.lock (clean) — ${packagesScanned} pkgs`, findings);
   expect(findings).toEqual([]);
+  expect(packagesScanned).toBeGreaterThan(0);
 });
 
 test("scanPnpmLockFile parses pnpm lockfile v9 cleanly", async () => {
-  const findings = await scanPnpmLockFile(
+  const { findings, packagesScanned } = await scanPnpmLockFile(
     resolve(fixtures, "pnpm-lock-v9.yaml"),
     await loadIndex(),
   );
-  printFindings("pnpm-lock-v9.yaml (clean)", findings);
+  printFindings(
+    `pnpm-lock-v9.yaml (clean) — ${packagesScanned} pkgs`,
+    findings,
+  );
   expect(findings).toEqual([]);
+  // This fixture is a truncated lockfile that only contains the `importers:`
+  // block (no `packages:`), so packagesScanned is 0 — exercised separately by
+  // the compromised pnpm fixture, which asserts the count.
 });
 
 test("scanYarnLockFile parses yarn berry v8 cleanly", async () => {
-  const findings = await scanYarnLockFile(
+  const { findings, packagesScanned } = await scanYarnLockFile(
     resolve(fixtures, "yarn-v8.lock"),
     await loadIndex(),
   );
-  printFindings("yarn-v8.lock (clean)", findings);
+  printFindings(`yarn-v8.lock (clean) — ${packagesScanned} pkgs`, findings);
   expect(findings).toEqual([]);
+  expect(packagesScanned).toBeGreaterThan(0);
 });
 
 // --- compromised fixtures: every parser must surface both planted hits
 
 test("scanNpmLockFile detects compromised packages in package-lock.json v3", async () => {
   const file = resolve(compromisedDir, "package-lock.json");
-  const findings = sortByPackage(
-    await scanNpmLockFile(file, await loadIndex()),
+  const result = await scanNpmLockFile(file, await loadIndex());
+  const findings = sortByPackage(result.findings);
+  printFindings(
+    `package-lock.json v3 (compromised) — ${result.packagesScanned} pkgs`,
+    findings,
   );
-  printFindings("package-lock.json v3 (compromised)", findings);
   expect(findings).toEqual(
     EXPECTED_HITS.map((h) => ({ ...h, lockfile: file, ecosystem: "npm" })),
   );
+  expect(result.packagesScanned).toBe(3);
 });
 
 test("scanBunLockFile detects compromised packages in bun.lock", async () => {
   const file = resolve(compromisedDir, "bun.lock");
-  const findings = sortByPackage(
-    await scanBunLockFile(file, await loadIndex()),
+  const result = await scanBunLockFile(file, await loadIndex());
+  const findings = sortByPackage(result.findings);
+  printFindings(
+    `bun.lock (compromised) — ${result.packagesScanned} pkgs`,
+    findings,
   );
-  printFindings("bun.lock (compromised)", findings);
   expect(findings).toEqual(
     EXPECTED_HITS.map((h) => ({ ...h, lockfile: file, ecosystem: "bun" })),
   );
+  expect(result.packagesScanned).toBe(3);
 });
 
 test("scanPnpmLockFile detects compromised packages in pnpm-lock.yaml v9", async () => {
   const file = resolve(compromisedDir, "pnpm-lock.yaml");
-  const findings = sortByPackage(
-    await scanPnpmLockFile(file, await loadIndex()),
+  const result = await scanPnpmLockFile(file, await loadIndex());
+  const findings = sortByPackage(result.findings);
+  printFindings(
+    `pnpm-lock.yaml v9 (compromised) — ${result.packagesScanned} pkgs`,
+    findings,
   );
-  printFindings("pnpm-lock.yaml v9 (compromised)", findings);
   expect(findings).toEqual(
     EXPECTED_HITS.map((h) => ({ ...h, lockfile: file, ecosystem: "pnpm" })),
   );
+  expect(result.packagesScanned).toBe(3);
 });
 
 test("scanYarnLockFile detects compromised packages in yarn.lock berry v8", async () => {
   const file = resolve(compromisedDir, "yarn.lock");
-  const findings = sortByPackage(
-    await scanYarnLockFile(file, await loadIndex()),
+  const result = await scanYarnLockFile(file, await loadIndex());
+  const findings = sortByPackage(result.findings);
+  printFindings(
+    `yarn.lock berry v8 (compromised) — ${result.packagesScanned} pkgs`,
+    findings,
   );
-  printFindings("yarn.lock berry v8 (compromised)", findings);
   expect(findings).toEqual(
     EXPECTED_HITS.map((h) => ({ ...h, lockfile: file, ecosystem: "yarn" })),
   );
+  expect(result.packagesScanned).toBe(3);
 });
 
 // --- end-to-end: scanLockFiles discovers every standard lockfile and tags
@@ -154,9 +174,13 @@ test("scanLockFiles discovers all four compromised lockfiles and aggregates find
   console.log(
     `\n[scanLockFiles] scanned ${result.scannedFiles.length} lockfile(s): ${result.scannedFiles.join(", ")}`,
   );
+  console.log(
+    `[scanLockFiles] ${result.packagesScanned} packages · ${result.packagesScanned - result.findings.length} clean · ${result.findings.length} affected`,
+  );
   printFindings("scanLockFiles aggregate", result.findings);
 
   expect(result.errors).toEqual([]);
+  expect(result.packagesScanned).toBe(12); // 4 lockfiles × 3 packages each
   expect([...result.scannedFiles].sort()).toEqual([
     "bun.lock",
     "package-lock.json",

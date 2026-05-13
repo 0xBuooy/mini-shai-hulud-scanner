@@ -5,6 +5,7 @@ import type {
   CompromisedIndex,
   Ecosystem,
   Finding,
+  LockFileScan,
   ScanError,
   ScanResult,
 } from "./types.ts";
@@ -67,29 +68,35 @@ export async function scanLockFiles(
     files.map(
       async (
         rel,
-      ): Promise<{ findings: Finding[]; error: ScanError | null }> => {
+      ): Promise<{
+        findings: Finding[];
+        packagesScanned: number;
+        error: ScanError | null;
+      }> => {
         const abs = resolve(root, rel);
         const name = basename(rel);
         try {
-          let found: Finding[];
+          let scan: LockFileScan;
           if (name === "package-lock.json" || name === "npm-shrinkwrap.json") {
-            found = await scanNpmLockFile(abs, index);
+            scan = await scanNpmLockFile(abs, index);
           } else if (name === "bun.lock" || name === "bun.lockb") {
-            found = await scanBunLockFile(abs, index);
+            scan = await scanBunLockFile(abs, index);
           } else if (name === "pnpm-lock.yaml") {
-            found = await scanPnpmLockFile(abs, index);
+            scan = await scanPnpmLockFile(abs, index);
           } else if (name === "yarn.lock") {
-            found = await scanYarnLockFile(abs, index);
+            scan = await scanYarnLockFile(abs, index);
           } else {
-            return { findings: [], error: null };
+            return { findings: [], packagesScanned: 0, error: null };
           }
           return {
-            findings: found.map((f) => ({ ...f, lockfile: rel })),
+            findings: scan.findings.map((f) => ({ ...f, lockfile: rel })),
+            packagesScanned: scan.packagesScanned,
             error: null,
           };
         } catch (err) {
           return {
             findings: [],
+            packagesScanned: 0,
             error: { file: rel, error: (err as Error).message },
           };
         }
@@ -101,6 +108,7 @@ export async function scanLockFiles(
     scannedFiles: files,
     findings: results.flatMap((r) => r.findings),
     errors: results.flatMap((r) => (r.error ? [r.error] : [])),
+    packagesScanned: results.reduce((n, r) => n + r.packagesScanned, 0),
   };
 }
 
@@ -164,9 +172,10 @@ type NpmLockJson = {
 export async function scanNpmLockFile(
   file: string,
   index: CompromisedIndex,
-): Promise<Finding[]> {
+): Promise<LockFileScan> {
   const data = JSON.parse(await readFile(file, "utf8")) as NpmLockJson;
   const findings: Finding[] = [];
+  let packagesScanned = 0;
 
   if (data.packages) {
     for (const [path, info] of Object.entries(data.packages)) {
@@ -174,6 +183,7 @@ export async function scanNpmLockFile(
       if (info.link) continue;
       const version = info.version;
       if (!version) continue;
+      packagesScanned++;
       const marker = "node_modules/";
       const tail =
         path.lastIndexOf(marker) >= 0
@@ -185,12 +195,13 @@ export async function scanNpmLockFile(
     }
   } else if (data.dependencies) {
     walkV1(data.dependencies, (name, version) => {
+      packagesScanned++;
       const h = hit(index, name, version);
       if (h) record(findings, file, "npm", name, version, h);
     });
   }
 
-  return findings;
+  return { findings, packagesScanned };
 }
 
 function walkV1(
@@ -223,7 +234,7 @@ function walkV1(
 export async function scanBunLockFile(
   file: string,
   index: CompromisedIndex,
-): Promise<Finding[]> {
+): Promise<LockFileScan> {
   if (file.endsWith(".lockb")) {
     throw new Error(
       "bun.lockb (binary) is not supported — run `bun install --save-text-lockfile` to produce bun.lock",
@@ -233,8 +244,9 @@ export async function scanBunLockFile(
   const text = await readFile(file, "utf8");
   const data = parseJsonc(text) as { packages?: Record<string, unknown> };
   const findings: Finding[] = [];
+  let packagesScanned = 0;
   const packages = data.packages;
-  if (!packages) return findings;
+  if (!packages) return { findings, packagesScanned };
 
   for (const value of Object.values(packages)) {
     if (!Array.isArray(value) || value.length === 0) continue;
@@ -242,10 +254,11 @@ export async function scanBunLockFile(
     if (typeof head !== "string") continue;
     const parsed = splitNameVersion(head);
     if (!parsed) continue;
+    packagesScanned++;
     const h = hit(index, parsed.name, parsed.version);
     if (h) record(findings, file, "bun", parsed.name, parsed.version, h);
   }
-  return findings;
+  return { findings, packagesScanned };
 }
 
 function splitNameVersion(
@@ -325,9 +338,10 @@ function parseJsonc(text: string): unknown {
 export async function scanPnpmLockFile(
   file: string,
   index: CompromisedIndex,
-): Promise<Finding[]> {
+): Promise<LockFileScan> {
   const text = await readFile(file, "utf8");
   const findings: Finding[] = [];
+  let packagesScanned = 0;
 
   const lines = text.split("\n");
   let inPackages = false;
@@ -347,11 +361,12 @@ export async function scanPnpmLockFile(
     if (!m) continue;
     const name = m[1]!;
     const version = m[2]!;
+    packagesScanned++;
     const h = hit(index, name, version);
     if (h) record(findings, file, "pnpm", name, version, h);
   }
 
-  return findings;
+  return { findings, packagesScanned };
 }
 
 // ------------------------------------------------------------------------- yarn
@@ -369,9 +384,10 @@ export async function scanPnpmLockFile(
 export async function scanYarnLockFile(
   file: string,
   index: CompromisedIndex,
-): Promise<Finding[]> {
+): Promise<LockFileScan> {
   const text = await readFile(file, "utf8");
   const findings: Finding[] = [];
+  let packagesScanned = 0;
 
   const blocks = text.split(/\r?\n\r?\n+/);
   for (const block of blocks) {
@@ -397,6 +413,8 @@ export async function scanYarnLockFile(
       if (at <= 0) continue;
       names.add(k.slice(0, at));
     }
+    if (names.size === 0) continue;
+    packagesScanned++;
 
     for (const name of names) {
       const h = hit(index, name, version);
@@ -404,5 +422,5 @@ export async function scanYarnLockFile(
     }
   }
 
-  return findings;
+  return { findings, packagesScanned };
 }
