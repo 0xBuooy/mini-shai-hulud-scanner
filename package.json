@@ -1,6 +1,6 @@
 {
   "name": "mini-shai-hulud-scanner",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Tiny zero-dependency CLI that scans npm, pnpm, yarn, and bun lockfiles for packages compromised in the TanStack May 2026 npm supply-chain incident (mini Shai-Hulud). Uses the official Snyk advisory as the source of truth.",
   "keywords": [
     "security",
