@@ -16,6 +16,8 @@ There is no separate lint step; `tsconfig.json` is strict (`noUncheckedIndexedAc
 
 `bunfig.toml` pins `minimumReleaseAge = 86400` (24h) as supply-chain hardening. Do not lower this without a stated reason.
 
+Maintain `CHANGELOG.md` for user-visible changes. Add unreleased entries as changes land, and move them under a dated version heading when cutting an npm release.
+
 ## Architecture
 
 A zero-runtime-dependency CLI that detects known-compromised npm package versions in lockfiles. Two halves:
