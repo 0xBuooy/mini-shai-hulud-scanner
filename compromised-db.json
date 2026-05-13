@@ -1,7 +1,7 @@
 {
   "source": "https://security.snyk.io/TanStack-npm-Supply-Chain-Compromise-May-2026",
   "incident": "TanStack-npm-Supply-Chain-Compromise-May-2026",
-  "fetchedAt": "2026-05-13T02:08:21.060Z",
+  "fetchedAt": "2026-05-13T03:22:11.694Z",
   "totalPackages": 172,
   "packages": [
     {
