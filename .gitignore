@@ -2,5 +2,6 @@ node_modules/
 dist/
 bun.lock
 bun.lockb
+!tests/fixtures/**/bun.lock
 *.log
 .DS_Store

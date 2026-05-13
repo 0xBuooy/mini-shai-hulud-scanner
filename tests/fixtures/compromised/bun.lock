@@ -1,0 +1,18 @@
+{
+  "lockfileVersion": 1,
+  "workspaces": {
+    "": {
+      "name": "compromised-bun-fixture",
+      "dependencies": {
+        "@beproduct/nestjs-auth": "0.1.10",
+        "@dirigible-ai/sdk": "0.6.2",
+        "lodash": "4.17.21"
+      }
+    }
+  },
+  "packages": {
+    "@beproduct/nestjs-auth": ["@beproduct/nestjs-auth@0.1.10", "", {}, "sha512-fake000000000000000000000000000000000000000000000000000000000000000000000000000000000=="],
+    "@dirigible-ai/sdk": ["@dirigible-ai/sdk@0.6.2", "", {}, "sha512-fake111111111111111111111111111111111111111111111111111111111111111111111111111111111=="],
+    "lodash": ["lodash@4.17.21", "", {}, "sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg=="]
+  }
+}
