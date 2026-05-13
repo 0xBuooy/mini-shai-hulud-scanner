@@ -260,16 +260,53 @@ function splitNameVersion(
 }
 
 /**
- * Bun writes JSONC: line comments and trailing commas are permitted. URLs
- * inside strings (`https://...`) are preserved because the line-comment regex
- * requires a non-colon character before `//`.
+ * Bun writes JSONC: line/block comments and trailing commas are permitted.
+ * Parsed with a tiny state machine so that `//` and `/*` inside JSON strings
+ * (e.g. base64 sha512 integrity values like `sha512-.../...==`) are preserved.
  */
 function parseJsonc(text: string): unknown {
-  const stripped = text
-    .replace(/\/\*[\s\S]*?\*\//g, "")
-    .replace(/(^|[^:])\/\/[^\n]*/g, "$1")
-    .replace(/,(\s*[}\]])/g, "$1");
-  return JSON.parse(stripped);
+  let out = "";
+  let i = 0;
+  const n = text.length;
+  while (i < n) {
+    const c = text[i]!;
+    if (c === '"') {
+      // copy string literal verbatim, honoring backslash escapes
+      const start = i;
+      i++;
+      while (i < n) {
+        const d = text[i]!;
+        if (d === "\\") {
+          i += 2;
+          continue;
+        }
+        if (d === '"') {
+          i++;
+          break;
+        }
+        i++;
+      }
+      out += text.slice(start, i);
+      continue;
+    }
+    if (c === "/" && i + 1 < n) {
+      const next = text[i + 1]!;
+      if (next === "/") {
+        i += 2;
+        while (i < n && text[i] !== "\n") i++;
+        continue;
+      }
+      if (next === "*") {
+        i += 2;
+        while (i + 1 < n && !(text[i] === "*" && text[i + 1] === "/")) i++;
+        i += 2;
+        continue;
+      }
+    }
+    out += c;
+    i++;
+  }
+  return JSON.parse(out.replace(/,(\s*[}\]])/g, "$1"));
 }
 
 // ------------------------------------------------------------------------- pnpm

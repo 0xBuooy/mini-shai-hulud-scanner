@@ -1,0 +1,38 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      '@beproduct/nestjs-auth':
+        specifier: 0.1.10
+        version: 0.1.10
+      '@dirigible-ai/sdk':
+        specifier: 0.6.2
+        version: 0.6.2
+      lodash:
+        specifier: 4.17.21
+        version: 4.17.21
+
+packages:
+
+  '@beproduct/nestjs-auth@0.1.10':
+    resolution: {integrity: sha512-fake000000000000000000000000000000000000000000000000000000000000000000000000000000000==}
+
+  '@dirigible-ai/sdk@0.6.2':
+    resolution: {integrity: sha512-fake111111111111111111111111111111111111111111111111111111111111111111111111111111111==}
+
+  lodash@4.17.21:
+    resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
+
+snapshots:
+
+  '@beproduct/nestjs-auth@0.1.10': {}
+
+  '@dirigible-ai/sdk@0.6.2': {}
+
+  lodash@4.17.21: {}

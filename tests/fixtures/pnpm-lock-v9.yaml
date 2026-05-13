@@ -1,0 +1,96 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+overrides:
+  '@types/babel__traverse': ^7.28.0
+  vite-plugin-dts: 4.2.3
+  solid-js: 1.9.12
+  react: ^19.2.3
+  react-dom: ^19.2.3
+  '@types/react': ^19.2.8
+  '@types/react-dom': ^19.2.3
+  eslint: ^9.22.0
+  vite: ^8.0.0
+  '@types/node': 25.0.9
+  '@playwright/test': ^1.57.0
+  '@tanstack/query-core': ^5.99.0
+  '@tanstack/react-query': ^5.99.0
+  '@tanstack/solid-query': ^5.99.0
+  '@tanstack/vue-query': ^5.99.0
+  '@tanstack/history': workspace:*
+  '@tanstack/router-core': workspace:*
+  '@tanstack/react-router': workspace:*
+  '@tanstack/router-cli': workspace:*
+  '@tanstack/router-devtools': workspace:*
+  '@tanstack/router-devtools-core': workspace:^
+  '@tanstack/react-router-devtools': workspace:^
+  '@tanstack/solid-router-devtools': workspace:^
+  '@tanstack/router-generator': workspace:*
+  '@tanstack/virtual-file-routes': workspace:*
+  '@tanstack/router-plugin': workspace:*
+  '@tanstack/router-vite-plugin': workspace:*
+  '@tanstack/router-ssr-query-core': workspace:*
+  '@tanstack/react-router-ssr-query': workspace:*
+  '@tanstack/solid-router-ssr-query': workspace:*
+  '@tanstack/vue-router-ssr-query': workspace:*
+  '@tanstack/zod-adapter': workspace:*
+  '@tanstack/valibot-adapter': workspace:*
+  '@tanstack/arktype-adapter': workspace:*
+  '@tanstack/react-start': workspace:*
+  '@tanstack/react-start-rsc': workspace:*
+  '@tanstack/react-start-client': workspace:*
+  '@tanstack/react-start-server': workspace:*
+  '@tanstack/solid-start': workspace:*
+  '@tanstack/solid-start-client': workspace:*
+  '@tanstack/solid-start-server': workspace:*
+  '@tanstack/vue-start': workspace:*
+  '@tanstack/vue-start-client': workspace:*
+  '@tanstack/vue-start-server': workspace:*
+  '@tanstack/start-plugin-core': workspace:*
+  '@tanstack/start-client-core': workspace:*
+  '@tanstack/start-server-core': workspace:*
+  '@tanstack/start-storage-context': workspace:*
+  '@tanstack/vue-router': workspace:*
+  '@tanstack/vue-router-devtools': workspace:*
+  '@tanstack/eslint-plugin-router': workspace:*
+  '@tanstack/router-utils': workspace:*
+  '@tanstack/start-static-server-functions': workspace:*
+  '@tanstack/nitro-v2-vite-plugin': workspace:*
+
+importers:
+
+  .:
+    devDependencies:
+      '@playwright/test':
+        specifier: ^1.57.0
+        version: 1.58.0
+      '@tanstack/query-core':
+        specifier: ^5.99.0
+        version: 5.99.0
+      '@tanstack/react-query':
+        specifier: ^5.99.0
+        version: 5.99.0(react@19.2.3)
+      '@tanstack/solid-query':
+        specifier: ^5.99.0
+        version: 5.99.0(solid-js@1.9.12)
+      '@tanstack/vue-query':
+        specifier: ^5.99.0
+        version: 5.99.0(vue@3.5.25(typescript@6.0.2))
+      react:
+        specifier: ^19.2.3
+        version: 19.2.3
+      react-dom:
+        specifier: ^19.2.3
+        version: 19.2.3(react@19.2.3)
+      solid-js:
+        specifier: 1.9.12
+        version: 1.9.12
+      typescript:
+        specifier: ^6.0.2
+        version: 6.0.2
+      vite:
+        specifier: ^8.0.0
+        version: 8.0.0
