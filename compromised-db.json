@@ -1,0 +1,1790 @@
+{
+  "source": "https://security.snyk.io/TanStack-npm-Supply-Chain-Compromise-May-2026",
+  "incident": "TanStack-npm-Supply-Chain-Compromise-May-2026",
+  "fetchedAt": "2026-05-13T02:08:21.060Z",
+  "totalPackages": 172,
+  "packages": [
+    {
+      "name": "@beproduct/nestjs-auth",
+      "ecosystem": "npm",
+      "versions": [
+        "0.1.10",
+        "0.1.11",
+        "0.1.12",
+        "0.1.13",
+        "0.1.14",
+        "0.1.15",
+        "0.1.16",
+        "0.1.17",
+        "0.1.18",
+        "0.1.19",
+        "0.1.2",
+        "0.1.3",
+        "0.1.4",
+        "0.1.5",
+        "0.1.6",
+        "0.1.7",
+        "0.1.8",
+        "0.1.9"
+      ],
+      "snykId": "SNYK-JS-BEPRODUCTNESTJSAUTH-16640335",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-BEPRODUCTNESTJSAUTH-16640335"
+    },
+    {
+      "name": "@dirigible-ai/sdk",
+      "ecosystem": "npm",
+      "versions": [
+        "0.6.2",
+        "0.6.3"
+      ],
+      "snykId": "SNYK-JS-DIRIGIBLEAISDK-16640337",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-DIRIGIBLEAISDK-16640337"
+    },
+    {
+      "name": "@draftauth/client",
+      "ecosystem": "npm",
+      "versions": [
+        "0.2.1",
+        "0.2.2"
+      ],
+      "snykId": "SNYK-JS-DRAFTAUTHCLIENT-16640348",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-DRAFTAUTHCLIENT-16640348"
+    },
+    {
+      "name": "@draftauth/core",
+      "ecosystem": "npm",
+      "versions": [
+        "0.13.1",
+        "0.13.2"
+      ],
+      "snykId": "SNYK-JS-DRAFTAUTHCORE-16640346",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-DRAFTAUTHCORE-16640346"
+    },
+    {
+      "name": "@draftlab/auth",
+      "ecosystem": "npm",
+      "versions": [
+        "0.24.1",
+        "0.24.2"
+      ],
+      "snykId": "SNYK-JS-DRAFTLABAUTH-16640349",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-DRAFTLABAUTH-16640349"
+    },
+    {
+      "name": "@draftlab/auth-router",
+      "ecosystem": "npm",
+      "versions": [
+        "0.5.1",
+        "0.5.2"
+      ],
+      "snykId": "SNYK-JS-DRAFTLABAUTHROUTER-16640350",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-DRAFTLABAUTHROUTER-16640350"
+    },
+    {
+      "name": "@draftlab/db",
+      "ecosystem": "npm",
+      "versions": [
+        "0.16.1",
+        "0.16.2"
+      ],
+      "snykId": "SNYK-JS-DRAFTLABDB-16640351",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-DRAFTLABDB-16640351"
+    },
+    {
+      "name": "@mesadev/rest",
+      "ecosystem": "npm",
+      "versions": [
+        "0.28.3"
+      ],
+      "snykId": "SNYK-JS-MESADEVREST-16640912",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-MESADEVREST-16640912"
+    },
+    {
+      "name": "@mesadev/saguaro",
+      "ecosystem": "npm",
+      "versions": [
+        "0.4.22"
+      ],
+      "snykId": "SNYK-JS-MESADEVSAGUARO-16640910",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-MESADEVSAGUARO-16640910"
+    },
+    {
+      "name": "@mesadev/sdk",
+      "ecosystem": "npm",
+      "versions": [
+        "0.28.3"
+      ],
+      "snykId": "SNYK-JS-MESADEVSDK-16640911",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-MESADEVSDK-16640911"
+    },
+    {
+      "name": "@mistralai/mistralai",
+      "ecosystem": "npm",
+      "versions": [
+        "2.2.2",
+        "2.2.3",
+        "2.2.4"
+      ],
+      "snykId": "SNYK-JS-MISTRALAIMISTRALAI-16640896",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-MISTRALAIMISTRALAI-16640896"
+    },
+    {
+      "name": "@mistralai/mistralai-azure",
+      "ecosystem": "npm",
+      "versions": [
+        "1.7.1",
+        "1.7.2",
+        "1.7.3"
+      ],
+      "snykId": "SNYK-JS-MISTRALAIMISTRALAIAZURE-16640908",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-MISTRALAIMISTRALAIAZURE-16640908"
+    },
+    {
+      "name": "@mistralai/mistralai-gcp",
+      "ecosystem": "npm",
+      "versions": [
+        "1.7.1",
+        "1.7.2",
+        "1.7.3"
+      ],
+      "snykId": "SNYK-JS-MISTRALAIMISTRALAIGCP-16640909",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-MISTRALAIMISTRALAIGCP-16640909"
+    },
+    {
+      "name": "@ml-toolkit-ts/preprocessing",
+      "ecosystem": "npm",
+      "versions": [
+        "1.0.2",
+        "1.0.3"
+      ],
+      "snykId": "SNYK-JS-MLTOOLKITTSPREPROCESSING-16640338",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-MLTOOLKITTSPREPROCESSING-16640338"
+    },
+    {
+      "name": "@ml-toolkit-ts/xgboost",
+      "ecosystem": "npm",
+      "versions": [
+        "1.0.3",
+        "1.0.4"
+      ],
+      "snykId": "SNYK-JS-MLTOOLKITTSXGBOOST-16640339",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-MLTOOLKITTSXGBOOST-16640339"
+    },
+    {
+      "name": "@opensearch-project/opensearch",
+      "ecosystem": "npm",
+      "versions": [
+        "3.5.3",
+        "3.6.2",
+        "3.7.0",
+        "3.8.0"
+      ],
+      "snykId": "SNYK-JS-OPENSEARCHPROJECTOPENSEARCH-16640915",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-OPENSEARCHPROJECTOPENSEARCH-16640915"
+    },
+    {
+      "name": "@squawk/airport-data",
+      "ecosystem": "npm",
+      "versions": [
+        "0.7.4",
+        "0.7.5",
+        "0.7.6",
+        "0.7.7",
+        "0.7.8"
+      ],
+      "snykId": "SNYK-JS-SQUAWKAIRPORTDATA-16640876",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-SQUAWKAIRPORTDATA-16640876"
+    },
+    {
+      "name": "@squawk/airports",
+      "ecosystem": "npm",
+      "versions": [
+        "0.6.2",
+        "0.6.3",
+        "0.6.4",
+        "0.6.5",
+        "0.6.6"
+      ],
+      "snykId": "SNYK-JS-SQUAWKAIRPORTS-16640888",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-SQUAWKAIRPORTS-16640888"
+    },
+    {
+      "name": "@squawk/airspace",
+      "ecosystem": "npm",
+      "versions": [
+        "0.8.1",
+        "0.8.2",
+        "0.8.3",
+        "0.8.4",
+        "0.8.5"
+      ],
+      "snykId": "SNYK-JS-SQUAWKAIRSPACE-16640892",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-SQUAWKAIRSPACE-16640892"
+    },
+    {
+      "name": "@squawk/airspace-data",
+      "ecosystem": "npm",
+      "versions": [
+        "0.5.3",
+        "0.5.4",
+        "0.5.5",
+        "0.5.6",
+        "0.5.7"
+      ],
+      "snykId": "SNYK-JS-SQUAWKAIRSPACEDATA-16640882",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-SQUAWKAIRSPACEDATA-16640882"
+    },
+    {
+      "name": "@squawk/airway-data",
+      "ecosystem": "npm",
+      "versions": [
+        "0.5.4",
+        "0.5.5",
+        "0.5.6",
+        "0.5.7",
+        "0.5.8"
+      ],
+      "snykId": "SNYK-JS-SQUAWKAIRWAYDATA-16640895",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-SQUAWKAIRWAYDATA-16640895"
+    },
+    {
+      "name": "@squawk/airways",
+      "ecosystem": "npm",
+      "versions": [
+        "0.4.2",
+        "0.4.3",
+        "0.4.4",
+        "0.4.5",
+        "0.4.6"
+      ],
+      "snykId": "SNYK-JS-SQUAWKAIRWAYS-16640887",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-SQUAWKAIRWAYS-16640887"
+    },
+    {
+      "name": "@squawk/fix-data",
+      "ecosystem": "npm",
+      "versions": [
+        "0.6.4",
+        "0.6.5",
+        "0.6.6",
+        "0.6.7",
+        "0.6.8"
+      ],
+      "snykId": "SNYK-JS-SQUAWKFIXDATA-16640873",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-SQUAWKFIXDATA-16640873"
+    },
+    {
+      "name": "@squawk/fixes",
+      "ecosystem": "npm",
+      "versions": [
+        "0.3.2",
+        "0.3.3",
+        "0.3.4",
+        "0.3.5",
+        "0.3.6"
+      ],
+      "snykId": "SNYK-JS-SQUAWKFIXES-16640881",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-SQUAWKFIXES-16640881"
+    },
+    {
+      "name": "@squawk/flight-math",
+      "ecosystem": "npm",
+      "versions": [
+        "0.5.4",
+        "0.5.5",
+        "0.5.6",
+        "0.5.7",
+        "0.5.8"
+      ],
+      "snykId": "SNYK-JS-SQUAWKFLIGHTMATH-16640879",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-SQUAWKFLIGHTMATH-16640879"
+    },
+    {
+      "name": "@squawk/flightplan",
+      "ecosystem": "npm",
+      "versions": [
+        "0.5.2",
+        "0.5.3",
+        "0.5.4",
+        "0.5.5",
+        "0.5.6"
+      ],
+      "snykId": "SNYK-JS-SQUAWKFLIGHTPLAN-16640877",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-SQUAWKFLIGHTPLAN-16640877"
+    },
+    {
+      "name": "@squawk/geo",
+      "ecosystem": "npm",
+      "versions": [
+        "0.4.4",
+        "0.4.5",
+        "0.4.6",
+        "0.4.7",
+        "0.4.8"
+      ],
+      "snykId": "SNYK-JS-SQUAWKGEO-16640893",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-SQUAWKGEO-16640893"
+    },
+    {
+      "name": "@squawk/icao-registry",
+      "ecosystem": "npm",
+      "versions": [
+        "0.5.2",
+        "0.5.3",
+        "0.5.4",
+        "0.5.5",
+        "0.5.6"
+      ],
+      "snykId": "SNYK-JS-SQUAWKICAOREGISTRY-16640891",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-SQUAWKICAOREGISTRY-16640891"
+    },
+    {
+      "name": "@squawk/icao-registry-data",
+      "ecosystem": "npm",
+      "versions": [
+        "0.8.4",
+        "0.8.5",
+        "0.8.6",
+        "0.8.7",
+        "0.8.8"
+      ],
+      "snykId": "SNYK-JS-SQUAWKICAOREGISTRYDATA-16640875",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-SQUAWKICAOREGISTRYDATA-16640875"
+    },
+    {
+      "name": "@squawk/mcp",
+      "ecosystem": "npm",
+      "versions": [
+        "0.9.1",
+        "0.9.2",
+        "0.9.3",
+        "0.9.4",
+        "0.9.5"
+      ],
+      "snykId": "SNYK-JS-SQUAWKMCP-16640880",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-SQUAWKMCP-16640880"
+    },
+    {
+      "name": "@squawk/navaid-data",
+      "ecosystem": "npm",
+      "versions": [
+        "0.6.4",
+        "0.6.5",
+        "0.6.6",
+        "0.6.7",
+        "0.6.8"
+      ],
+      "snykId": "SNYK-JS-SQUAWKNAVAIDDATA-16640894",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-SQUAWKNAVAIDDATA-16640894"
+    },
+    {
+      "name": "@squawk/navaids",
+      "ecosystem": "npm",
+      "versions": [
+        "0.4.2",
+        "0.4.3",
+        "0.4.4",
+        "0.4.5",
+        "0.4.6"
+      ],
+      "snykId": "SNYK-JS-SQUAWKNAVAIDS-16640884",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-SQUAWKNAVAIDS-16640884"
+    },
+    {
+      "name": "@squawk/notams",
+      "ecosystem": "npm",
+      "versions": [
+        "0.3.10",
+        "0.3.6",
+        "0.3.7",
+        "0.3.8",
+        "0.3.9"
+      ],
+      "snykId": "SNYK-JS-SQUAWKNOTAMS-16640886",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-SQUAWKNOTAMS-16640886"
+    },
+    {
+      "name": "@squawk/procedure-data",
+      "ecosystem": "npm",
+      "versions": [
+        "0.7.3",
+        "0.7.4",
+        "0.7.5",
+        "0.7.6",
+        "0.7.7"
+      ],
+      "snykId": "SNYK-JS-SQUAWKPROCEDUREDATA-16640883",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-SQUAWKPROCEDUREDATA-16640883"
+    },
+    {
+      "name": "@squawk/procedures",
+      "ecosystem": "npm",
+      "versions": [
+        "0.5.2",
+        "0.5.3",
+        "0.5.4",
+        "0.5.5",
+        "0.5.6"
+      ],
+      "snykId": "SNYK-JS-SQUAWKPROCEDURES-16640885",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-SQUAWKPROCEDURES-16640885"
+    },
+    {
+      "name": "@squawk/types",
+      "ecosystem": "npm",
+      "versions": [
+        "0.8.1",
+        "0.8.2",
+        "0.8.3",
+        "0.8.4",
+        "0.8.5"
+      ],
+      "snykId": "SNYK-JS-SQUAWKTYPES-16640890",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-SQUAWKTYPES-16640890"
+    },
+    {
+      "name": "@squawk/units",
+      "ecosystem": "npm",
+      "versions": [
+        "0.4.3",
+        "0.4.4",
+        "0.4.5",
+        "0.4.6",
+        "0.4.7"
+      ],
+      "snykId": "SNYK-JS-SQUAWKUNITS-16640878",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-SQUAWKUNITS-16640878"
+    },
+    {
+      "name": "@squawk/weather",
+      "ecosystem": "npm",
+      "versions": [
+        "0.5.10",
+        "0.5.6",
+        "0.5.7",
+        "0.5.8",
+        "0.5.9"
+      ],
+      "snykId": "SNYK-JS-SQUAWKWEATHER-16640874",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-SQUAWKWEATHER-16640874"
+    },
+    {
+      "name": "@supersurkhet/cli",
+      "ecosystem": "npm",
+      "versions": [
+        "0.0.2",
+        "0.0.3",
+        "0.0.4",
+        "0.0.5",
+        "0.0.6",
+        "0.0.7"
+      ],
+      "snykId": "SNYK-JS-SUPERSURKHETCLI-16640343",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-SUPERSURKHETCLI-16640343"
+    },
+    {
+      "name": "@supersurkhet/sdk",
+      "ecosystem": "npm",
+      "versions": [
+        "0.0.2",
+        "0.0.3",
+        "0.0.4",
+        "0.0.5",
+        "0.0.6",
+        "0.0.7"
+      ],
+      "snykId": "SNYK-JS-SUPERSURKHETSDK-16640344",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-SUPERSURKHETSDK-16640344"
+    },
+    {
+      "name": "@tallyui/components",
+      "ecosystem": "npm",
+      "versions": [
+        "1.0.1",
+        "1.0.2",
+        "1.0.3"
+      ],
+      "snykId": "SNYK-JS-TALLYUICOMPONENTS-16640900",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-TALLYUICOMPONENTS-16640900"
+    },
+    {
+      "name": "@tallyui/connector-medusa",
+      "ecosystem": "npm",
+      "versions": [
+        "1.0.1",
+        "1.0.2",
+        "1.0.3"
+      ],
+      "snykId": "SNYK-JS-TALLYUICONNECTORMEDUSA-16640906",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-TALLYUICONNECTORMEDUSA-16640906"
+    },
+    {
+      "name": "@tallyui/connector-shopify",
+      "ecosystem": "npm",
+      "versions": [
+        "1.0.1",
+        "1.0.2",
+        "1.0.3"
+      ],
+      "snykId": "SNYK-JS-TALLYUICONNECTORSHOPIFY-16640899",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-TALLYUICONNECTORSHOPIFY-16640899"
+    },
+    {
+      "name": "@tallyui/connector-vendure",
+      "ecosystem": "npm",
+      "versions": [
+        "1.0.1",
+        "1.0.2",
+        "1.0.3"
+      ],
+      "snykId": "SNYK-JS-TALLYUICONNECTORVENDURE-16640898",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-TALLYUICONNECTORVENDURE-16640898"
+    },
+    {
+      "name": "@tallyui/connector-woocommerce",
+      "ecosystem": "npm",
+      "versions": [
+        "1.0.1",
+        "1.0.2",
+        "1.0.3"
+      ],
+      "snykId": "SNYK-JS-TALLYUICONNECTORWOOCOMMERCE-16640904",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-TALLYUICONNECTORWOOCOMMERCE-16640904"
+    },
+    {
+      "name": "@tallyui/core",
+      "ecosystem": "npm",
+      "versions": [
+        "0.2.1",
+        "0.2.2",
+        "0.2.3"
+      ],
+      "snykId": "SNYK-JS-TALLYUICORE-16640907",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-TALLYUICORE-16640907"
+    },
+    {
+      "name": "@tallyui/database",
+      "ecosystem": "npm",
+      "versions": [
+        "1.0.1",
+        "1.0.2",
+        "1.0.3"
+      ],
+      "snykId": "SNYK-JS-TALLYUIDATABASE-16640905",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-TALLYUIDATABASE-16640905"
+    },
+    {
+      "name": "@tallyui/pos",
+      "ecosystem": "npm",
+      "versions": [
+        "0.1.1",
+        "0.1.2",
+        "0.1.3"
+      ],
+      "snykId": "SNYK-JS-TALLYUIPOS-16640897",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-TALLYUIPOS-16640897"
+    },
+    {
+      "name": "@tallyui/storage-sqlite",
+      "ecosystem": "npm",
+      "versions": [
+        "0.2.1",
+        "0.2.2",
+        "0.2.3"
+      ],
+      "snykId": "SNYK-JS-TALLYUISTORAGESQLITE-16640903",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-TALLYUISTORAGESQLITE-16640903"
+    },
+    {
+      "name": "@tallyui/theme",
+      "ecosystem": "npm",
+      "versions": [
+        "0.2.1",
+        "0.2.2",
+        "0.2.3"
+      ],
+      "snykId": "SNYK-JS-TALLYUITHEME-16640901",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-TALLYUITHEME-16640901"
+    },
+    {
+      "name": "@tanstack/arktype-adapter",
+      "ecosystem": "npm",
+      "versions": [
+        "1.166.12",
+        "1.166.15"
+      ],
+      "snykId": "SNYK-JS-TANSTACKARKTYPEADAPTER-16640201",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-TANSTACKARKTYPEADAPTER-16640201"
+    },
+    {
+      "name": "@tanstack/eslint-plugin-router",
+      "ecosystem": "npm",
+      "versions": [
+        "1.161.12",
+        "1.161.9"
+      ],
+      "snykId": "SNYK-JS-TANSTACKESLINTPLUGINROUTER-16640202",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-TANSTACKESLINTPLUGINROUTER-16640202"
+    },
+    {
+      "name": "@tanstack/eslint-plugin-start",
+      "ecosystem": "npm",
+      "versions": [
+        "0.0.4",
+        "0.0.7"
+      ],
+      "snykId": "SNYK-JS-TANSTACKESLINTPLUGINSTART-16640203",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-TANSTACKESLINTPLUGINSTART-16640203"
+    },
+    {
+      "name": "@tanstack/history",
+      "ecosystem": "npm",
+      "versions": [
+        "1.161.12",
+        "1.161.9"
+      ],
+      "snykId": "SNYK-JS-TANSTACKHISTORY-16640204",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-TANSTACKHISTORY-16640204"
+    },
+    {
+      "name": "@tanstack/nitro-v2-vite-plugin",
+      "ecosystem": "npm",
+      "versions": [
+        "1.154.12",
+        "1.154.15"
+      ],
+      "snykId": "SNYK-JS-TANSTACKNITROV2VITEPLUGIN-16640205",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-TANSTACKNITROV2VITEPLUGIN-16640205"
+    },
+    {
+      "name": "@tanstack/react-router",
+      "ecosystem": "npm",
+      "versions": [
+        "1.169.5",
+        "1.169.8"
+      ],
+      "snykId": "SNYK-JS-TANSTACKREACTROUTER-16640208",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-TANSTACKREACTROUTER-16640208"
+    },
+    {
+      "name": "@tanstack/react-router-devtools",
+      "ecosystem": "npm",
+      "versions": [
+        "1.166.16",
+        "1.166.19"
+      ],
+      "snykId": "SNYK-JS-TANSTACKREACTROUTERDEVTOOLS-16640206",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-TANSTACKREACTROUTERDEVTOOLS-16640206"
+    },
+    {
+      "name": "@tanstack/react-router-ssr-query",
+      "ecosystem": "npm",
+      "versions": [
+        "1.166.15",
+        "1.166.18"
+      ],
+      "snykId": "SNYK-JS-TANSTACKREACTROUTERSSRQUERY-16640207",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-TANSTACKREACTROUTERSSRQUERY-16640207"
+    },
+    {
+      "name": "@tanstack/react-start",
+      "ecosystem": "npm",
+      "versions": [
+        "1.167.68",
+        "1.167.71"
+      ],
+      "snykId": "SNYK-JS-TANSTACKREACTSTART-16640215",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-TANSTACKREACTSTART-16640215"
+    },
+    {
+      "name": "@tanstack/react-start-client",
+      "ecosystem": "npm",
+      "versions": [
+        "1.166.51",
+        "1.166.54"
+      ],
+      "snykId": "SNYK-JS-TANSTACKREACTSTARTCLIENT-16640209",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-TANSTACKREACTSTARTCLIENT-16640209"
+    },
+    {
+      "name": "@tanstack/react-start-rsc",
+      "ecosystem": "npm",
+      "versions": [
+        "0.0.47",
+        "0.0.50"
+      ],
+      "snykId": "SNYK-JS-TANSTACKREACTSTARTRSC-16640211",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-TANSTACKREACTSTARTRSC-16640211"
+    },
+    {
+      "name": "@tanstack/react-start-server",
+      "ecosystem": "npm",
+      "versions": [
+        "1.166.55",
+        "1.166.58"
+      ],
+      "snykId": "SNYK-JS-TANSTACKREACTSTARTSERVER-16640213",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-TANSTACKREACTSTARTSERVER-16640213"
+    },
+    {
+      "name": "@tanstack/router-cli",
+      "ecosystem": "npm",
+      "versions": [
+        "1.166.46",
+        "1.166.49"
+      ],
+      "snykId": "SNYK-JS-TANSTACKROUTERCLI-16640216",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-TANSTACKROUTERCLI-16640216"
+    },
+    {
+      "name": "@tanstack/router-core",
+      "ecosystem": "npm",
+      "versions": [
+        "1.169.5",
+        "1.169.8"
+      ],
+      "snykId": "SNYK-JS-TANSTACKROUTERCORE-16640218",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-TANSTACKROUTERCORE-16640218"
+    },
+    {
+      "name": "@tanstack/router-devtools",
+      "ecosystem": "npm",
+      "versions": [
+        "1.166.16",
+        "1.166.19"
+      ],
+      "snykId": "SNYK-JS-TANSTACKROUTERDEVTOOLS-16640220",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-TANSTACKROUTERDEVTOOLS-16640220"
+    },
+    {
+      "name": "@tanstack/router-devtools-core",
+      "ecosystem": "npm",
+      "versions": [
+        "1.167.6",
+        "1.167.9"
+      ],
+      "snykId": "SNYK-JS-TANSTACKROUTERDEVTOOLSCORE-16640219",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-TANSTACKROUTERDEVTOOLSCORE-16640219"
+    },
+    {
+      "name": "@tanstack/router-generator",
+      "ecosystem": "npm",
+      "versions": [
+        "1.166.45",
+        "1.166.48"
+      ],
+      "snykId": "SNYK-JS-TANSTACKROUTERGENERATOR-16640221",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-TANSTACKROUTERGENERATOR-16640221"
+    },
+    {
+      "name": "@tanstack/router-plugin",
+      "ecosystem": "npm",
+      "versions": [
+        "1.167.38",
+        "1.167.41"
+      ],
+      "snykId": "SNYK-JS-TANSTACKROUTERPLUGIN-16640222",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-TANSTACKROUTERPLUGIN-16640222"
+    },
+    {
+      "name": "@tanstack/router-ssr-query-core",
+      "ecosystem": "npm",
+      "versions": [
+        "1.168.3",
+        "1.168.6"
+      ],
+      "snykId": "SNYK-JS-TANSTACKROUTERSSRQUERYCORE-16640223",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-TANSTACKROUTERSSRQUERYCORE-16640223"
+    },
+    {
+      "name": "@tanstack/router-utils",
+      "ecosystem": "npm",
+      "versions": [
+        "1.161.11",
+        "1.161.14"
+      ],
+      "snykId": "SNYK-JS-TANSTACKROUTERUTILS-16640224",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-TANSTACKROUTERUTILS-16640224"
+    },
+    {
+      "name": "@tanstack/router-vite-plugin",
+      "ecosystem": "npm",
+      "versions": [
+        "1.166.53",
+        "1.166.56"
+      ],
+      "snykId": "SNYK-JS-TANSTACKROUTERVITEPLUGIN-16640225",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-TANSTACKROUTERVITEPLUGIN-16640225"
+    },
+    {
+      "name": "@tanstack/solid-router",
+      "ecosystem": "npm",
+      "versions": [
+        "1.169.5",
+        "1.169.8"
+      ],
+      "snykId": "SNYK-JS-TANSTACKSOLIDROUTER-16640230",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-TANSTACKSOLIDROUTER-16640230"
+    },
+    {
+      "name": "@tanstack/solid-router-devtools",
+      "ecosystem": "npm",
+      "versions": [
+        "1.166.16",
+        "1.166.19"
+      ],
+      "snykId": "SNYK-JS-TANSTACKSOLIDROUTERDEVTOOLS-16640226",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-TANSTACKSOLIDROUTERDEVTOOLS-16640226"
+    },
+    {
+      "name": "@tanstack/solid-router-ssr-query",
+      "ecosystem": "npm",
+      "versions": [
+        "1.166.15",
+        "1.166.18"
+      ],
+      "snykId": "SNYK-JS-TANSTACKSOLIDROUTERSSRQUERY-16640227",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-TANSTACKSOLIDROUTERSSRQUERY-16640227"
+    },
+    {
+      "name": "@tanstack/solid-start",
+      "ecosystem": "npm",
+      "versions": [
+        "1.167.65",
+        "1.167.68"
+      ],
+      "snykId": "SNYK-JS-TANSTACKSOLIDSTART-16640237",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-TANSTACKSOLIDSTART-16640237"
+    },
+    {
+      "name": "@tanstack/solid-start-client",
+      "ecosystem": "npm",
+      "versions": [
+        "1.166.50",
+        "1.166.53"
+      ],
+      "snykId": "SNYK-JS-TANSTACKSOLIDSTARTCLIENT-16640233",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-TANSTACKSOLIDSTARTCLIENT-16640233"
+    },
+    {
+      "name": "@tanstack/solid-start-server",
+      "ecosystem": "npm",
+      "versions": [
+        "1.166.54",
+        "1.166.57"
+      ],
+      "snykId": "SNYK-JS-TANSTACKSOLIDSTARTSERVER-16640235",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-TANSTACKSOLIDSTARTSERVER-16640235"
+    },
+    {
+      "name": "@tanstack/start-client-core",
+      "ecosystem": "npm",
+      "versions": [
+        "1.168.5",
+        "1.168.8"
+      ],
+      "snykId": "SNYK-JS-TANSTACKSTARTCLIENTCORE-16640238",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-TANSTACKSTARTCLIENTCORE-16640238"
+    },
+    {
+      "name": "@tanstack/start-fn-stubs",
+      "ecosystem": "npm",
+      "versions": [
+        "1.161.12",
+        "1.161.9"
+      ],
+      "snykId": "SNYK-JS-TANSTACKSTARTFNSTUBS-16640239",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-TANSTACKSTARTFNSTUBS-16640239"
+    },
+    {
+      "name": "@tanstack/start-plugin-core",
+      "ecosystem": "npm",
+      "versions": [
+        "1.169.23",
+        "1.169.26"
+      ],
+      "snykId": "SNYK-JS-TANSTACKSTARTPLUGINCORE-16640240",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-TANSTACKSTARTPLUGINCORE-16640240"
+    },
+    {
+      "name": "@tanstack/start-server-core",
+      "ecosystem": "npm",
+      "versions": [
+        "1.167.33",
+        "1.167.36"
+      ],
+      "snykId": "SNYK-JS-TANSTACKSTARTSERVERCORE-16640241",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-TANSTACKSTARTSERVERCORE-16640241"
+    },
+    {
+      "name": "@tanstack/start-static-server-functions",
+      "ecosystem": "npm",
+      "versions": [
+        "1.166.44",
+        "1.166.47"
+      ],
+      "snykId": "SNYK-JS-TANSTACKSTARTSTATICSERVERFUNCTIONS-16640242",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-TANSTACKSTARTSTATICSERVERFUNCTIONS-16640242"
+    },
+    {
+      "name": "@tanstack/start-storage-context",
+      "ecosystem": "npm",
+      "versions": [
+        "1.166.38",
+        "1.166.41"
+      ],
+      "snykId": "SNYK-JS-TANSTACKSTARTSTORAGECONTEXT-16640243",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-TANSTACKSTARTSTORAGECONTEXT-16640243"
+    },
+    {
+      "name": "@tanstack/valibot-adapter",
+      "ecosystem": "npm",
+      "versions": [
+        "1.166.12",
+        "1.166.15"
+      ],
+      "snykId": "SNYK-JS-TANSTACKVALIBOTADAPTER-16640244",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-TANSTACKVALIBOTADAPTER-16640244"
+    },
+    {
+      "name": "@tanstack/virtual-file-routes",
+      "ecosystem": "npm",
+      "versions": [
+        "1.161.10",
+        "1.161.13"
+      ],
+      "snykId": "SNYK-JS-TANSTACKVIRTUALFILEROUTES-16640245",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-TANSTACKVIRTUALFILEROUTES-16640245"
+    },
+    {
+      "name": "@tanstack/vue-router",
+      "ecosystem": "npm",
+      "versions": [
+        "1.169.5",
+        "1.169.8"
+      ],
+      "snykId": "SNYK-JS-TANSTACKVUEROUTER-16640252",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-TANSTACKVUEROUTER-16640252"
+    },
+    {
+      "name": "@tanstack/vue-router-devtools",
+      "ecosystem": "npm",
+      "versions": [
+        "1.166.16",
+        "1.166.19"
+      ],
+      "snykId": "SNYK-JS-TANSTACKVUEROUTERDEVTOOLS-16640247",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-TANSTACKVUEROUTERDEVTOOLS-16640247"
+    },
+    {
+      "name": "@tanstack/vue-router-ssr-query",
+      "ecosystem": "npm",
+      "versions": [
+        "1.166.15",
+        "1.166.18"
+      ],
+      "snykId": "SNYK-JS-TANSTACKVUEROUTERSSRQUERY-16640250",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-TANSTACKVUEROUTERSSRQUERY-16640250"
+    },
+    {
+      "name": "@tanstack/vue-start",
+      "ecosystem": "npm",
+      "versions": [
+        "1.167.61",
+        "1.167.64"
+      ],
+      "snykId": "SNYK-JS-TANSTACKVUESTART-16640256",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-TANSTACKVUESTART-16640256"
+    },
+    {
+      "name": "@tanstack/vue-start-client",
+      "ecosystem": "npm",
+      "versions": [
+        "1.166.46",
+        "1.166.49"
+      ],
+      "snykId": "SNYK-JS-TANSTACKVUESTARTCLIENT-16640254",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-TANSTACKVUESTARTCLIENT-16640254"
+    },
+    {
+      "name": "@tanstack/vue-start-server",
+      "ecosystem": "npm",
+      "versions": [
+        "1.166.50",
+        "1.166.53"
+      ],
+      "snykId": "SNYK-JS-TANSTACKVUESTARTSERVER-16640255",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-TANSTACKVUESTARTSERVER-16640255"
+    },
+    {
+      "name": "@tanstack/zod-adapter",
+      "ecosystem": "npm",
+      "versions": [
+        "1.166.12",
+        "1.166.15"
+      ],
+      "snykId": "SNYK-JS-TANSTACKZODADAPTER-16640257",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-TANSTACKZODADAPTER-16640257"
+    },
+    {
+      "name": "@taskflow-corp/cli",
+      "ecosystem": "npm",
+      "versions": [
+        "0.1.24",
+        "0.1.25",
+        "0.1.26",
+        "0.1.27",
+        "0.1.28",
+        "0.1.29"
+      ],
+      "snykId": "SNYK-JS-TASKFLOWCORPCLI-16640345",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-TASKFLOWCORPCLI-16640345"
+    },
+    {
+      "name": "@tolka/cli",
+      "ecosystem": "npm",
+      "versions": [
+        "1.0.2",
+        "1.0.3",
+        "1.0.4",
+        "1.0.5",
+        "1.0.6"
+      ],
+      "snykId": "SNYK-JS-TOLKACLI-16640354",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-TOLKACLI-16640354"
+    },
+    {
+      "name": "@uipath/access-policy-sdk",
+      "ecosystem": "npm",
+      "versions": [
+        "0.3.1"
+      ],
+      "snykId": "SNYK-JS-UIPATHACCESSPOLICYSDK-16640275",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHACCESSPOLICYSDK-16640275"
+    },
+    {
+      "name": "@uipath/access-policy-tool",
+      "ecosystem": "npm",
+      "versions": [
+        "0.3.1"
+      ],
+      "snykId": "SNYK-JS-UIPATHACCESSPOLICYTOOL-16640324",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHACCESSPOLICYTOOL-16640324"
+    },
+    {
+      "name": "@uipath/admin-tool",
+      "ecosystem": "npm",
+      "versions": [
+        "0.1.1"
+      ],
+      "snykId": "SNYK-JS-UIPATHADMINTOOL-16640312",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHADMINTOOL-16640312"
+    },
+    {
+      "name": "@uipath/agent-sdk",
+      "ecosystem": "npm",
+      "versions": [
+        "1.0.2"
+      ],
+      "snykId": "SNYK-JS-UIPATHAGENTSDK-16640266",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHAGENTSDK-16640266"
+    },
+    {
+      "name": "@uipath/agent-tool",
+      "ecosystem": "npm",
+      "versions": [
+        "1.0.1"
+      ],
+      "snykId": "SNYK-JS-UIPATHAGENTTOOL-16640273",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHAGENTTOOL-16640273"
+    },
+    {
+      "name": "@uipath/agent.sdk",
+      "ecosystem": "npm",
+      "versions": [
+        "0.0.18"
+      ],
+      "snykId": "SNYK-JS-UIPATHAGENTSDK-16640914",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHAGENTSDK-16640914"
+    },
+    {
+      "name": "@uipath/aops-policy-tool",
+      "ecosystem": "npm",
+      "versions": [
+        "0.3.1"
+      ],
+      "snykId": "SNYK-JS-UIPATHAOPSPOLICYTOOL-16640319",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHAOPSPOLICYTOOL-16640319"
+    },
+    {
+      "name": "@uipath/ap-chat",
+      "ecosystem": "npm",
+      "versions": [
+        "1.5.7"
+      ],
+      "snykId": "SNYK-JS-UIPATHAPCHAT-16640259",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHAPCHAT-16640259"
+    },
+    {
+      "name": "@uipath/api-workflow-tool",
+      "ecosystem": "npm",
+      "versions": [
+        "1.0.1"
+      ],
+      "snykId": "SNYK-JS-UIPATHAPIWORKFLOWTOOL-16640301",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHAPIWORKFLOWTOOL-16640301"
+    },
+    {
+      "name": "@uipath/apollo-core",
+      "ecosystem": "npm",
+      "versions": [
+        "5.9.2"
+      ],
+      "snykId": "SNYK-JS-UIPATHAPOLLOCORE-16640258",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHAPOLLOCORE-16640258"
+    },
+    {
+      "name": "@uipath/apollo-react",
+      "ecosystem": "npm",
+      "versions": [
+        "4.24.5"
+      ],
+      "snykId": "SNYK-JS-UIPATHAPOLLOREACT-16640913",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHAPOLLOREACT-16640913"
+    },
+    {
+      "name": "@uipath/apollo-wind",
+      "ecosystem": "npm",
+      "versions": [
+        "2.16.2"
+      ],
+      "snykId": "SNYK-JS-UIPATHAPOLLOWIND-16640280",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHAPOLLOWIND-16640280"
+    },
+    {
+      "name": "@uipath/auth",
+      "ecosystem": "npm",
+      "versions": [
+        "1.0.1"
+      ],
+      "snykId": "SNYK-JS-UIPATHAUTH-16640300",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHAUTH-16640300"
+    },
+    {
+      "name": "@uipath/case-tool",
+      "ecosystem": "npm",
+      "versions": [
+        "1.0.1"
+      ],
+      "snykId": "SNYK-JS-UIPATHCASETOOL-16640262",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHCASETOOL-16640262"
+    },
+    {
+      "name": "@uipath/cli",
+      "ecosystem": "npm",
+      "versions": [
+        "1.0.1"
+      ],
+      "snykId": "SNYK-JS-UIPATHCLI-16640288",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHCLI-16640288"
+    },
+    {
+      "name": "@uipath/codedagent-tool",
+      "ecosystem": "npm",
+      "versions": [
+        "1.0.1"
+      ],
+      "snykId": "SNYK-JS-UIPATHCODEDAGENTTOOL-16640315",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHCODEDAGENTTOOL-16640315"
+    },
+    {
+      "name": "@uipath/codedagents-tool",
+      "ecosystem": "npm",
+      "versions": [
+        "0.1.12"
+      ],
+      "snykId": "SNYK-JS-UIPATHCODEDAGENTSTOOL-16640310",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHCODEDAGENTSTOOL-16640310"
+    },
+    {
+      "name": "@uipath/codedapp-tool",
+      "ecosystem": "npm",
+      "versions": [
+        "1.0.1"
+      ],
+      "snykId": "SNYK-JS-UIPATHCODEDAPPTOOL-16640318",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHCODEDAPPTOOL-16640318"
+    },
+    {
+      "name": "@uipath/common",
+      "ecosystem": "npm",
+      "versions": [
+        "1.0.1"
+      ],
+      "snykId": "SNYK-JS-UIPATHCOMMON-16640284",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHCOMMON-16640284"
+    },
+    {
+      "name": "@uipath/context-grounding-tool",
+      "ecosystem": "npm",
+      "versions": [
+        "0.1.1"
+      ],
+      "snykId": "SNYK-JS-UIPATHCONTEXTGROUNDINGTOOL-16640333",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHCONTEXTGROUNDINGTOOL-16640333"
+    },
+    {
+      "name": "@uipath/data-fabric-tool",
+      "ecosystem": "npm",
+      "versions": [
+        "1.0.2"
+      ],
+      "snykId": "SNYK-JS-UIPATHDATAFABRICTOOL-16640278",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHDATAFABRICTOOL-16640278"
+    },
+    {
+      "name": "@uipath/docsai-tool",
+      "ecosystem": "npm",
+      "versions": [
+        "1.0.1"
+      ],
+      "snykId": "SNYK-JS-UIPATHDOCSAITOOL-16640331",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHDOCSAITOOL-16640331"
+    },
+    {
+      "name": "@uipath/filesystem",
+      "ecosystem": "npm",
+      "versions": [
+        "1.0.1"
+      ],
+      "snykId": "SNYK-JS-UIPATHFILESYSTEM-16640332",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHFILESYSTEM-16640332"
+    },
+    {
+      "name": "@uipath/flow-tool",
+      "ecosystem": "npm",
+      "versions": [
+        "1.0.2"
+      ],
+      "snykId": "SNYK-JS-UIPATHFLOWTOOL-16640260",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHFLOWTOOL-16640260"
+    },
+    {
+      "name": "@uipath/functions-tool",
+      "ecosystem": "npm",
+      "versions": [
+        "1.0.1"
+      ],
+      "snykId": "SNYK-JS-UIPATHFUNCTIONSTOOL-16640286",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHFUNCTIONSTOOL-16640286"
+    },
+    {
+      "name": "@uipath/gov-tool",
+      "ecosystem": "npm",
+      "versions": [
+        "0.3.1"
+      ],
+      "snykId": "SNYK-JS-UIPATHGOVTOOL-16640322",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHGOVTOOL-16640322"
+    },
+    {
+      "name": "@uipath/identity-tool",
+      "ecosystem": "npm",
+      "versions": [
+        "0.1.1"
+      ],
+      "snykId": "SNYK-JS-UIPATHIDENTITYTOOL-16640321",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHIDENTITYTOOL-16640321"
+    },
+    {
+      "name": "@uipath/insights-sdk",
+      "ecosystem": "npm",
+      "versions": [
+        "1.0.1"
+      ],
+      "snykId": "SNYK-JS-UIPATHINSIGHTSSDK-16640295",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHINSIGHTSSDK-16640295"
+    },
+    {
+      "name": "@uipath/insights-tool",
+      "ecosystem": "npm",
+      "versions": [
+        "1.0.1"
+      ],
+      "snykId": "SNYK-JS-UIPATHINSIGHTSTOOL-16640298",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHINSIGHTSTOOL-16640298"
+    },
+    {
+      "name": "@uipath/integrationservice-sdk",
+      "ecosystem": "npm",
+      "versions": [
+        "1.0.2"
+      ],
+      "snykId": "SNYK-JS-UIPATHINTEGRATIONSERVICESDK-16640291",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHINTEGRATIONSERVICESDK-16640291"
+    },
+    {
+      "name": "@uipath/integrationservice-tool",
+      "ecosystem": "npm",
+      "versions": [
+        "1.0.2"
+      ],
+      "snykId": "SNYK-JS-UIPATHINTEGRATIONSERVICETOOL-16640271",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHINTEGRATIONSERVICETOOL-16640271"
+    },
+    {
+      "name": "@uipath/llmgw-tool",
+      "ecosystem": "npm",
+      "versions": [
+        "1.0.1"
+      ],
+      "snykId": "SNYK-JS-UIPATHLLMGWTOOL-16640302",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHLLMGWTOOL-16640302"
+    },
+    {
+      "name": "@uipath/maestro-sdk",
+      "ecosystem": "npm",
+      "versions": [
+        "1.0.1"
+      ],
+      "snykId": "SNYK-JS-UIPATHMAESTROSDK-16640274",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHMAESTROSDK-16640274"
+    },
+    {
+      "name": "@uipath/maestro-tool",
+      "ecosystem": "npm",
+      "versions": [
+        "1.0.1"
+      ],
+      "snykId": "SNYK-JS-UIPATHMAESTROTOOL-16640267",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHMAESTROTOOL-16640267"
+    },
+    {
+      "name": "@uipath/orchestrator-tool",
+      "ecosystem": "npm",
+      "versions": [
+        "1.0.1"
+      ],
+      "snykId": "SNYK-JS-UIPATHORCHESTRATORTOOL-16640283",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHORCHESTRATORTOOL-16640283"
+    },
+    {
+      "name": "@uipath/packager-tool-apiworkflow",
+      "ecosystem": "npm",
+      "versions": [
+        "0.0.19"
+      ],
+      "snykId": "SNYK-JS-UIPATHPACKAGERTOOLAPIWORKFLOW-16640293",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHPACKAGERTOOLAPIWORKFLOW-16640293"
+    },
+    {
+      "name": "@uipath/packager-tool-bpmn",
+      "ecosystem": "npm",
+      "versions": [
+        "0.0.9"
+      ],
+      "snykId": "SNYK-JS-UIPATHPACKAGERTOOLBPMN-16640325",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHPACKAGERTOOLBPMN-16640325"
+    },
+    {
+      "name": "@uipath/packager-tool-case",
+      "ecosystem": "npm",
+      "versions": [
+        "0.0.9"
+      ],
+      "snykId": "SNYK-JS-UIPATHPACKAGERTOOLCASE-16640326",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHPACKAGERTOOLCASE-16640326"
+    },
+    {
+      "name": "@uipath/packager-tool-connector",
+      "ecosystem": "npm",
+      "versions": [
+        "0.0.19"
+      ],
+      "snykId": "SNYK-JS-UIPATHPACKAGERTOOLCONNECTOR-16640285",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHPACKAGERTOOLCONNECTOR-16640285"
+    },
+    {
+      "name": "@uipath/packager-tool-flow",
+      "ecosystem": "npm",
+      "versions": [
+        "0.0.19"
+      ],
+      "snykId": "SNYK-JS-UIPATHPACKAGERTOOLFLOW-16640289",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHPACKAGERTOOLFLOW-16640289"
+    },
+    {
+      "name": "@uipath/packager-tool-functions",
+      "ecosystem": "npm",
+      "versions": [
+        "0.1.1"
+      ],
+      "snykId": "SNYK-JS-UIPATHPACKAGERTOOLFUNCTIONS-16640330",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHPACKAGERTOOLFUNCTIONS-16640330"
+    },
+    {
+      "name": "@uipath/packager-tool-webapp",
+      "ecosystem": "npm",
+      "versions": [
+        "1.0.6"
+      ],
+      "snykId": "SNYK-JS-UIPATHPACKAGERTOOLWEBAPP-16640327",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHPACKAGERTOOLWEBAPP-16640327"
+    },
+    {
+      "name": "@uipath/packager-tool-workflowcompiler",
+      "ecosystem": "npm",
+      "versions": [
+        "0.0.16"
+      ],
+      "snykId": "SNYK-JS-UIPATHPACKAGERTOOLWORKFLOWCOMPILER-16640276",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHPACKAGERTOOLWORKFLOWCOMPILER-16640276"
+    },
+    {
+      "name": "@uipath/packager-tool-workflowcompiler-browser",
+      "ecosystem": "npm",
+      "versions": [
+        "0.0.34"
+      ],
+      "snykId": "SNYK-JS-UIPATHPACKAGERTOOLWORKFLOWCOMPILERBROWSER-16640304",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHPACKAGERTOOLWORKFLOWCOMPILERBROWSER-16640304"
+    },
+    {
+      "name": "@uipath/platform-tool",
+      "ecosystem": "npm",
+      "versions": [
+        "1.0.1"
+      ],
+      "snykId": "SNYK-JS-UIPATHPLATFORMTOOL-16640309",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHPLATFORMTOOL-16640309"
+    },
+    {
+      "name": "@uipath/project-packager",
+      "ecosystem": "npm",
+      "versions": [
+        "1.1.16"
+      ],
+      "snykId": "SNYK-JS-UIPATHPROJECTPACKAGER-16640281",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHPROJECTPACKAGER-16640281"
+    },
+    {
+      "name": "@uipath/resource-tool",
+      "ecosystem": "npm",
+      "versions": [
+        "1.0.1"
+      ],
+      "snykId": "SNYK-JS-UIPATHRESOURCETOOL-16640320",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHRESOURCETOOL-16640320"
+    },
+    {
+      "name": "@uipath/resourcecatalog-tool",
+      "ecosystem": "npm",
+      "versions": [
+        "0.1.1"
+      ],
+      "snykId": "SNYK-JS-UIPATHRESOURCECATALOGTOOL-16640317",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHRESOURCECATALOGTOOL-16640317"
+    },
+    {
+      "name": "@uipath/resources-tool",
+      "ecosystem": "npm",
+      "versions": [
+        "0.1.11"
+      ],
+      "snykId": "SNYK-JS-UIPATHRESOURCESTOOL-16640303",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHRESOURCESTOOL-16640303"
+    },
+    {
+      "name": "@uipath/robot",
+      "ecosystem": "npm",
+      "versions": [
+        "1.3.4"
+      ],
+      "snykId": "SNYK-JS-UIPATHROBOT-16640268",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHROBOT-16640268"
+    },
+    {
+      "name": "@uipath/rpa-legacy-tool",
+      "ecosystem": "npm",
+      "versions": [
+        "1.0.1"
+      ],
+      "snykId": "SNYK-JS-UIPATHRPALEGACYTOOL-16640297",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHRPALEGACYTOOL-16640297"
+    },
+    {
+      "name": "@uipath/rpa-tool",
+      "ecosystem": "npm",
+      "versions": [
+        "0.9.5"
+      ],
+      "snykId": "SNYK-JS-UIPATHRPATOOL-16640277",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHRPATOOL-16640277"
+    },
+    {
+      "name": "@uipath/solution-packager",
+      "ecosystem": "npm",
+      "versions": [
+        "0.0.35"
+      ],
+      "snykId": "SNYK-JS-UIPATHSOLUTIONPACKAGER-16640299",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHSOLUTIONPACKAGER-16640299"
+    },
+    {
+      "name": "@uipath/solution-tool",
+      "ecosystem": "npm",
+      "versions": [
+        "1.0.1"
+      ],
+      "snykId": "SNYK-JS-UIPATHSOLUTIONTOOL-16640272",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHSOLUTIONTOOL-16640272"
+    },
+    {
+      "name": "@uipath/solutionpackager-sdk",
+      "ecosystem": "npm",
+      "versions": [
+        "1.0.11"
+      ],
+      "snykId": "SNYK-JS-UIPATHSOLUTIONPACKAGERSDK-16640261",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHSOLUTIONPACKAGERSDK-16640261"
+    },
+    {
+      "name": "@uipath/solutionpackager-tool-core",
+      "ecosystem": "npm",
+      "versions": [
+        "0.0.34"
+      ],
+      "snykId": "SNYK-JS-UIPATHSOLUTIONPACKAGERTOOLCORE-16640294",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHSOLUTIONPACKAGERTOOLCORE-16640294"
+    },
+    {
+      "name": "@uipath/tasks-tool",
+      "ecosystem": "npm",
+      "versions": [
+        "1.0.1"
+      ],
+      "snykId": "SNYK-JS-UIPATHTASKSTOOL-16640287",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHTASKSTOOL-16640287"
+    },
+    {
+      "name": "@uipath/telemetry",
+      "ecosystem": "npm",
+      "versions": [
+        "0.0.7"
+      ],
+      "snykId": "SNYK-JS-UIPATHTELEMETRY-16640314",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHTELEMETRY-16640314"
+    },
+    {
+      "name": "@uipath/test-manager-tool",
+      "ecosystem": "npm",
+      "versions": [
+        "1.0.2"
+      ],
+      "snykId": "SNYK-JS-UIPATHTESTMANAGERTOOL-16640290",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHTESTMANAGERTOOL-16640290"
+    },
+    {
+      "name": "@uipath/tool-workflowcompiler",
+      "ecosystem": "npm",
+      "versions": [
+        "0.0.12"
+      ],
+      "snykId": "SNYK-JS-UIPATHTOOLWORKFLOWCOMPILER-16640313",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHTOOLWORKFLOWCOMPILER-16640313"
+    },
+    {
+      "name": "@uipath/traces-tool",
+      "ecosystem": "npm",
+      "versions": [
+        "1.0.1"
+      ],
+      "snykId": "SNYK-JS-UIPATHTRACESTOOL-16640328",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHTRACESTOOL-16640328"
+    },
+    {
+      "name": "@uipath/ui-widgets-multi-file-upload",
+      "ecosystem": "npm",
+      "versions": [
+        "1.0.1"
+      ],
+      "snykId": "SNYK-JS-UIPATHUIWIDGETSMULTIFILEUPLOAD-16640306",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHUIWIDGETSMULTIFILEUPLOAD-16640306"
+    },
+    {
+      "name": "@uipath/uipath-python-bridge",
+      "ecosystem": "npm",
+      "versions": [
+        "1.0.1"
+      ],
+      "snykId": "SNYK-JS-UIPATHUIPATHPYTHONBRIDGE-16640334",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHUIPATHPYTHONBRIDGE-16640334"
+    },
+    {
+      "name": "@uipath/vertical-solutions-tool",
+      "ecosystem": "npm",
+      "versions": [
+        "1.0.1"
+      ],
+      "snykId": "SNYK-JS-UIPATHVERTICALSOLUTIONSTOOL-16640296",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHVERTICALSOLUTIONSTOOL-16640296"
+    },
+    {
+      "name": "@uipath/vss",
+      "ecosystem": "npm",
+      "versions": [
+        "0.1.6"
+      ],
+      "snykId": "SNYK-JS-UIPATHVSS-16640270",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHVSS-16640270"
+    },
+    {
+      "name": "@uipath/widget.sdk",
+      "ecosystem": "npm",
+      "versions": [
+        "1.2.3"
+      ],
+      "snykId": "SNYK-JS-UIPATHWIDGETSDK-16640282",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-UIPATHWIDGETSDK-16640282"
+    },
+    {
+      "name": "agentwork-cli",
+      "ecosystem": "npm",
+      "versions": [
+        "0.1.4",
+        "0.1.5"
+      ],
+      "snykId": "SNYK-JS-AGENTWORKCLI-16640340",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-AGENTWORKCLI-16640340"
+    },
+    {
+      "name": "cmux-agent-mcp",
+      "ecosystem": "npm",
+      "versions": [
+        "0.1.3",
+        "0.1.4",
+        "0.1.5",
+        "0.1.6",
+        "0.1.7",
+        "0.1.8"
+      ],
+      "snykId": "SNYK-JS-CMUXAGENTMCP-16640342",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-CMUXAGENTMCP-16640342"
+    },
+    {
+      "name": "cross-stitch",
+      "ecosystem": "npm",
+      "versions": [
+        "1.1.3",
+        "1.1.4",
+        "1.1.5",
+        "1.1.6",
+        "1.1.7"
+      ],
+      "snykId": "SNYK-JS-CROSSSTITCH-16640872",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-CROSSSTITCH-16640872"
+    },
+    {
+      "name": "git-branch-selector",
+      "ecosystem": "npm",
+      "versions": [
+        "1.3.3",
+        "1.3.4",
+        "1.3.5",
+        "1.3.6",
+        "1.3.7"
+      ],
+      "snykId": "SNYK-JS-GITBRANCHSELECTOR-16640352",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-GITBRANCHSELECTOR-16640352"
+    },
+    {
+      "name": "git-git-git",
+      "ecosystem": "npm",
+      "versions": [
+        "1.0.10",
+        "1.0.11",
+        "1.0.12",
+        "1.0.8",
+        "1.0.9"
+      ],
+      "snykId": "SNYK-JS-GITGITGIT-16640353",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-GITGITGIT-16640353"
+    },
+    {
+      "name": "guardrails-ai",
+      "ecosystem": "npm",
+      "versions": [
+        "[0.10.1]"
+      ],
+      "snykId": "SNYK-PYTHON-GUARDRAILSAI-16641086",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-PYTHON-GUARDRAILSAI-16641086"
+    },
+    {
+      "name": "mistralai",
+      "ecosystem": "npm",
+      "versions": [
+        "2.4.6"
+      ],
+      "snykId": "SNYK-PYTHON-MISTRALAI-16641237",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-PYTHON-MISTRALAI-16641237"
+    },
+    {
+      "name": "ml-toolkit-ts",
+      "ecosystem": "npm",
+      "versions": [
+        "1.0.4",
+        "1.0.5"
+      ],
+      "snykId": "SNYK-JS-MLTOOLKITTS-16640341",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-MLTOOLKITTS-16640341"
+    },
+    {
+      "name": "nextmove-mcp",
+      "ecosystem": "npm",
+      "versions": [
+        "0.1.3",
+        "0.1.4",
+        "0.1.5",
+        "0.1.6",
+        "0.1.7"
+      ],
+      "snykId": "SNYK-JS-NEXTMOVEMCP-16640355",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-NEXTMOVEMCP-16640355"
+    },
+    {
+      "name": "safe-action",
+      "ecosystem": "npm",
+      "versions": [
+        "0.8.3",
+        "0.8.4"
+      ],
+      "snykId": "SNYK-JS-SAFEACTION-16640347",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-SAFEACTION-16640347"
+    },
+    {
+      "name": "ts-dna",
+      "ecosystem": "npm",
+      "versions": [
+        "3.0.1",
+        "3.0.2",
+        "3.0.3",
+        "3.0.4",
+        "3.0.5"
+      ],
+      "snykId": "SNYK-JS-TSDNA-16640889",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-TSDNA-16640889"
+    },
+    {
+      "name": "wot-api",
+      "ecosystem": "npm",
+      "versions": [
+        "0.8.1",
+        "0.8.2",
+        "0.8.3",
+        "0.8.4"
+      ],
+      "snykId": "SNYK-JS-WOTAPI-16640902",
+      "snykUrl": "https://security.snyk.io/vuln/SNYK-JS-WOTAPI-16640902"
+    }
+  ]
+}

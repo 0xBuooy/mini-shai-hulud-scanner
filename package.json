@@ -1,0 +1,14 @@
+{
+  "name": "mini-shai-hulud-scanner",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "update-db": "bun run scripts/update-compromised-db.ts",
+    "scan": "bun run src/scan.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.6.0"
+  }
+}

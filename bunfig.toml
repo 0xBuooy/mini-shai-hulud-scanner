@@ -1,0 +1,4 @@
+[install]
+# Refuse to install package versions younger than 1 day (86400 seconds).
+# Supply-chain hardening — malicious versions are usually yanked within hours.
+minimumReleaseAge = 86400
