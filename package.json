@@ -1,11 +1,23 @@
 {
   "name": "mini-shai-hulud-scanner",
   "version": "0.1.0",
-  "private": true,
   "type": "module",
+  "bin": {
+    "mini-shai-hulud-scanner": "./dist/scan.js"
+  },
+  "files": [
+    "dist",
+    "compromised-db.json"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
     "update-db": "bun run scripts/update-compromised-db.ts",
-    "scan": "bun run src/scan.ts"
+    "scan": "bun run src/scan.ts",
+    "test": "bun test",
+    "build": "bun run scripts/build.ts",
+    "prepublishOnly": "bun run build"
   },
   "devDependencies": {
     "@types/bun": "latest",

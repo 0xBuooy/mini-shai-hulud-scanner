@@ -1,6 +1,5 @@
-import { readFile } from "node:fs/promises";
-import { basename, resolve } from "node:path";
-import { Glob } from "bun";
+import { readdir, readFile } from "node:fs/promises";
+import { basename, join, resolve } from "node:path";
 import type {
   CompromisedDb,
   CompromisedIndex,
@@ -10,14 +9,14 @@ import type {
   ScanResult,
 } from "./types.ts";
 
-const LOCK_PATTERNS = [
+const LOCK_FILENAMES = new Set([
   "package-lock.json",
   "npm-shrinkwrap.json",
   "bun.lock",
   "bun.lockb",
   "pnpm-lock.yaml",
   "yarn.lock",
-] as const;
+]);
 
 export function buildIndex(db: CompromisedDb): CompromisedIndex {
   const idx: CompromisedIndex = new Map();
@@ -62,13 +61,7 @@ export async function scanLockFiles(
   db: CompromisedDb,
 ): Promise<ScanResult> {
   const index = buildIndex(db);
-  const glob = new Glob(`**/{${LOCK_PATTERNS.join(",")}}`);
-
-  const files: string[] = [];
-  for await (const rel of glob.scan({ cwd: root, dot: false })) {
-    if (rel.split("/").includes("node_modules")) continue;
-    files.push(rel);
-  }
+  const files = await findLockfiles(root);
 
   const results = await Promise.all(
     files.map(
@@ -109,6 +102,35 @@ export async function scanLockFiles(
     findings: results.flatMap((r) => r.findings),
     errors: results.flatMap((r) => (r.error ? [r.error] : [])),
   };
+}
+
+/**
+ * Recursive lockfile walker. Skips `node_modules` and dot-directories so that
+ * vendored lockfiles inside dependency trees, `.git`, `.next`, etc. don't
+ * pollute the scan. Works under both Bun and Node — no platform-specific glob.
+ */
+async function findLockfiles(root: string): Promise<string[]> {
+  const out: string[] = [];
+  async function walk(dir: string, rel: string): Promise<void> {
+    let entries;
+    try {
+      entries = await readdir(dir, { withFileTypes: true });
+    } catch {
+      return;
+    }
+    for (const ent of entries) {
+      if (ent.name === "node_modules" || ent.name.startsWith(".")) continue;
+      const subRel = rel ? `${rel}/${ent.name}` : ent.name;
+      const subAbs = join(dir, ent.name);
+      if (ent.isDirectory()) {
+        await walk(subAbs, subRel);
+      } else if (ent.isFile() && LOCK_FILENAMES.has(ent.name)) {
+        out.push(subRel);
+      }
+    }
+  }
+  await walk(root, "");
+  return out;
 }
 
 // -------------------------------------------------------------------------- npm

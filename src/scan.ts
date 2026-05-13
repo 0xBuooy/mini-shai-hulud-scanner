@@ -1,11 +1,13 @@
 import { readFile } from "node:fs/promises";
-import { resolve } from "node:path";
+import { dirname, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
 import { scanLockFiles } from "./scanner.ts";
 import type { CompromisedDb } from "./types.ts";
 
+const here = dirname(fileURLToPath(import.meta.url));
 const root = resolve(process.argv[2] ?? process.cwd());
 const dbPath = resolve(
-  process.argv[3] ?? resolve(import.meta.dir, "..", "compromised-db.json"),
+  process.argv[3] ?? resolve(here, "..", "compromised-db.json"),
 );
 
 const db = JSON.parse(await readFile(dbPath, "utf8")) as CompromisedDb;
