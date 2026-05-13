@@ -1,4 +1,4 @@
-import { readdir, readFile } from "node:fs/promises";
+import { readdir, readFile, stat } from "node:fs/promises";
 import { basename, join, resolve } from "node:path";
 import type {
   CompromisedDb,
@@ -62,7 +62,14 @@ export async function scanLockFiles(
   db: CompromisedDb,
 ): Promise<ScanResult> {
   const index = buildIndex(db);
-  const files = await findLockfiles(root);
+  let files: string[];
+  let rootError: ScanError | null = null;
+  try {
+    files = await findLockfiles(root);
+  } catch (err) {
+    files = [];
+    rootError = { file: root, error: (err as Error).message };
+  }
 
   const results = await Promise.all(
     files.map(
@@ -107,7 +114,10 @@ export async function scanLockFiles(
   return {
     scannedFiles: files,
     findings: results.flatMap((r) => r.findings),
-    errors: results.flatMap((r) => (r.error ? [r.error] : [])),
+    errors: [
+      ...(rootError ? [rootError] : []),
+      ...results.flatMap((r) => (r.error ? [r.error] : [])),
+    ],
     packagesScanned: results.reduce((n, r) => n + r.packagesScanned, 0),
   };
 }
@@ -118,6 +128,11 @@ export async function scanLockFiles(
  * pollute the scan. Works under both Bun and Node — no platform-specific glob.
  */
 async function findLockfiles(root: string): Promise<string[]> {
+  const rootStat = await stat(root);
+  if (!rootStat.isDirectory()) {
+    throw new Error("scan root is not a directory");
+  }
+
   const out: string[] = [];
   async function walk(dir: string, rel: string): Promise<void> {
     let entries;
@@ -356,7 +371,7 @@ export async function scanPnpmLockFile(
 
     // Match only the entry header lines (indented by exactly 2 spaces, ending in `:`).
     const m = line.match(
-      /^ {2}'?\/?(@[^/]+\/[^/@'\s]+|[^/@'\s]+)[@/]([^:'(\s]+)'?\s*:\s*$/,
+      /^ {2}'?\/?(@[^/]+\/[^/@'\s]+|[^/@'\s]+)[@/]([^:'(\s]+)(?:\([^']*\))?'?\s*:\s*$/,
     );
     if (!m) continue;
     const name = m[1]!;

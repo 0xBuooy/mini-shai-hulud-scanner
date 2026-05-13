@@ -1,6 +1,7 @@
 import { expect, test } from "bun:test";
-import { readFile } from "node:fs/promises";
-import { dirname, resolve } from "node:path";
+import { mkdtemp, readFile, writeFile } from "node:fs/promises";
+import { tmpdir } from "node:os";
+import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import {
   buildIndex,
@@ -151,6 +152,34 @@ test("scanPnpmLockFile detects compromised packages in pnpm-lock.yaml v9", async
   expect(result.packagesScanned).toBe(3);
 });
 
+test("scanPnpmLockFile detects pnpm entries with peer dependency suffixes", async () => {
+  const dir = await mkdtemp(join(tmpdir(), "mini-shai-hulud-test-"));
+  const file = join(dir, "pnpm-lock.yaml");
+  await writeFile(
+    file,
+    [
+      "lockfileVersion: '9.0'",
+      "",
+      "packages:",
+      "  '@beproduct/nestjs-auth@0.1.10(react@19.0.0)':",
+      "    resolution: {integrity: sha512-test}",
+      "",
+    ].join("\n"),
+  );
+
+  const result = await scanPnpmLockFile(file, await loadIndex());
+  const findings = sortByPackage(result.findings);
+
+  expect(findings).toEqual([
+    {
+      ...EXPECTED_HITS[0],
+      lockfile: file,
+      ecosystem: "pnpm",
+    },
+  ]);
+  expect(result.packagesScanned).toBe(1);
+});
+
 test("scanYarnLockFile detects compromised packages in yarn.lock berry v8", async () => {
   const file = resolve(compromisedDir, "yarn.lock");
   const result = await scanYarnLockFile(file, await loadIndex());
@@ -163,6 +192,17 @@ test("scanYarnLockFile detects compromised packages in yarn.lock berry v8", asyn
     EXPECTED_HITS.map((h) => ({ ...h, lockfile: file, ecosystem: "yarn" })),
   );
   expect(result.packagesScanned).toBe(3);
+});
+
+test("scanLockFiles reports a missing scan root as an error", async () => {
+  const missingRoot = join(tmpdir(), `mini-shai-hulud-missing-${Date.now()}`);
+  const result = await scanLockFiles(missingRoot, await loadDb());
+
+  expect(result.scannedFiles).toEqual([]);
+  expect(result.findings).toEqual([]);
+  expect(result.errors).toHaveLength(1);
+  expect(result.errors[0]?.file).toBe(missingRoot);
+  expect(result.errors[0]?.error).toContain("ENOENT");
 });
 
 // --- end-to-end: scanLockFiles discovers every standard lockfile and tags

@@ -24,7 +24,7 @@ function link(url: string, text: string): string {
 console.log(pc.bold("mini-shai-hulud-scanner"));
 console.log(`  ${pc.dim("root:")} ${root}`);
 console.log(
-  `  ${pc.dim("db:  ")} ${dbPath} ${pc.dim(`· ${db.totalPackages} known compromised versions`)}`,
+  `  ${pc.dim("db:  ")} ${dbPath} ${pc.dim(`· ${db.totalPackages} compromised packages`)}`,
 );
 console.log();
 
@@ -52,8 +52,13 @@ if (result.errors.length > 0) {
 
 if (result.findings.length === 0) {
   console.log();
-  console.log(pc.green("✓ no compromised packages found"));
-  process.exit(0);
+  if (result.errors.length > 0) {
+    console.log(pc.yellow("scan incomplete; fix the error(s) above and rerun"));
+    process.exit(2);
+  } else {
+    console.log(pc.green("✓ no compromised packages found"));
+    process.exit(0);
+  }
 }
 
 const byLockfile = new Map<string, Finding[]>();
