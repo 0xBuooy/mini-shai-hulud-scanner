@@ -2,6 +2,7 @@ import { readFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import pc from "picocolors";
+import { runHealthChecks } from "./healthcheck.ts";
 import { scanLockFiles } from "./scanner.ts";
 import type { CompromisedDb, Finding } from "./types.ts";
 
@@ -27,6 +28,21 @@ console.log(
   `  ${pc.dim("db:  ")} ${dbPath} ${pc.dim(`· ${db.totalPackages} compromised packages`)}`,
 );
 console.log();
+
+const checks = await runHealthChecks(root);
+if (checks.length > 0) {
+  console.log(pc.bold("pre-scan supply-chain checks:"));
+  for (const c of checks) {
+    const mark = c.passed ? pc.green("✓") : pc.red("✗");
+    console.log(`  ${mark} ${c.title}`);
+    if (c.detail) {
+      for (const line of c.detail.split("\n")) {
+        console.log(pc.dim(`      ${line}`));
+      }
+    }
+  }
+  console.log();
+}
 
 console.log(
   `scanned ${pc.bold(String(result.scannedFiles.length))} lockfile(s):`,
